@@ -25,6 +25,7 @@ module "eks" {
   eks_managed_node_groups = {
     default = {
       instance_types = [var.node_instance_type]
+      ami_type = "AL2023_x86_64" 
       min_size       = 1
       max_size       = 2
       desired_size   = 2
